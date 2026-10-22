@@ -2,25 +2,25 @@ public class App {
     public static void main(String[] args) throws Exception {
          int [] original = {5, 6, 4, 1, 2, 3};
         /**
-         * el arreglo original no se puede modificar, por eso 
+         * El arreglo original no se puede modificar, por eso 
          * se hace un clon de este para que se pueda usar en 
-         * los dos metodos de ordenamiento
+         * los dos métodos de ordenamiento.
          */
         int [] b = original.clone();
         int [] c = original.clone(); 
         int [] d = original.clone();
         /**
-         * el clone sirve para que el arreglo original no se modifique 
-         * y se pueda usar en los dos metodos de ordenamiento
+         * El clone sirve para que el arreglo original no se modifique 
+         * y se pueda usar en los dos métodos de ordenamiento.
          */ 
 
-        // USAR METODO DEL ARCHIVO(clase) BUBBLE
+        // USAR MÉTODO DEL ARCHIVO (clase) BUBBLE
         System.out.println("---------------------------------------------------");
         // INSTANCIAR el archivo BUBBLE
         // INSTANCIA la clase BUBBLE
         System.out.println("Original:");
         Bubble bubble = new Bubble();
-        // EJECUTAR CODIGO DEL ARCHIVO BUBBLE USO LA INSTANCIA bubble
+        // EJECUTAR CÓDIGO DEL ARCHIVO BUBBLE, USO LA INSTANCIA bubble
         printArray(b);
         bubble.sort(b);
         printArray(b);
@@ -32,12 +32,12 @@ public class App {
         selection.sort(c);
         printArray(c);
         /*
-        el sort sirve para llamar el metodo de ordenamiento SELECTION, se le 
-        pasa el arreglo c que es una copia del arreglo original, 
-        para que se pueda usar en los dos metodos de ordenamiento y
-        el printArray para imprimir el arreglo ordenado despues de usar 
-        el metodo sort
-        */
+         * El sort sirve para llamar el método de ordenamiento SELECTION, se le 
+         * pasa el arreglo c que es una copia del arreglo original, 
+         * para que se pueda usar en los dos métodos de ordenamiento y
+         * el printArray para imprimir el arreglo ordenado después de usar 
+         * el método sort.
+         */
         Insertion insertion = new Insertion();
         printArray(d);
         insertion.sort(d);
@@ -52,11 +52,11 @@ public class App {
             System.out.print(arreglo[i] + " - ");
         System.out.println();
         /**
-         * este metodo sirve para imprimir el arreglo, 
+         * Este método sirve para imprimir el arreglo, 
          * se le pasa el arreglo que se quiere imprimir y funciona 
-         * con un bucle for que recorre el arreglo y imprime cada elemento
+         * con un bucle for que recorre el arreglo e imprime cada elemento.
          */
-        
+         
             
     }
 }

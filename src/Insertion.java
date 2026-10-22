@@ -6,9 +6,9 @@ public class Insertion {
             while(j >= 0 && arreglo[j] > key){
                 arreglo[j + 1] = arreglo[j];
                 j--;
-                System.out.println("El aux" + key + " " + "se inserta en posicion " + arreglo[j + 1]);
             }
-             arreglo[j + 1] = key;
+            arreglo[j + 1] = key;
+            System.out.println("Se inserta el valor " + key + " en la posición " + (j + 1));
         }
         return arreglo;
     }   
