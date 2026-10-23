@@ -1,13 +1,13 @@
+
 package models;
 
-//Uns clase estudiante 
-// con 2 atributos
-
+// Clase Estudiante con dos atributos
 public class Estudiante {
+
     private String name;
     private double nota;
 
-    // Constructor lleno
+    // Constructor con parámetros
     public Estudiante(String name, double nota) {
         this.name = name;
         this.nota = nota;
@@ -35,6 +35,6 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante ["name=" + name + ", nota=" + nota + "]";
+        return "Estudiante [name=" + name + ", nota=" + nota + "]";
     }
 }
