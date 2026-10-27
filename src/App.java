@@ -19,17 +19,17 @@ public class App {
         Arrays.sort(original);
 
         System.out.println("Orden ascendente:");
-        for (int i = 0; i < original.length; i++) {
-            System.out.print(original[i] + " ");
+        for (int num : original) { // Bucle enhanced for loop para evitar las advertencias de VS Code
+            System.out.print(num + " ");
         }
         System.out.println();
 
-        // Orden descendente
+        // Orden descendente (Funciona gracias a que 'original' es Integer[])
         Arrays.sort(original, Comparator.reverseOrder());
 
         System.out.println("Orden descendente:");
-        for (int i = 0; i < original.length; i++) {
-            System.out.print(original[i] + " ");
+        for (int num : original) { // Bucle enhanced for loop para evitar las advertencias de VS Code
+            System.out.print(num + " ");
         }
         System.out.println();
     }
