@@ -176,20 +176,36 @@ public class Comparators {
         print(lista);
     }
 
-    /**
+/**
      * Ordena por Nota DESCENDENTE y Nombre ASCENDENTE
      * Comparator -> valor
      * Comparador por lambda
      * Comparator por referencia
      */
-
     private void ejemplo10() {
         System.out.println("Ejemplo 10");
         List<Estudiante> lista = new ArrayList<>(estList);
-        Comparator<Estudiante> comparador = Comparator.comparingDouble(Estudiante::getNota).reversed()
-                .thenComparing(Estudiante::getName);
+        Comparator<Estudiante> comparador = Comparator.comparingDouble((Estudiante e) -> e.getNota())
+            .reversed()
+            .thenComparing(Estudiante::getName);
+
         lista.sort(comparador);
         print(lista);
     }
+    
+    /**
+     * Ordena por Nota DESCENDENTE y Nombre ASCENDENTE
+     * Sumar 2 puntos si la nota es menor a 7
+     * La nota maxima es 10
+     * Comparator -> por valor calculado
+     * 1 Comparador por lambda con bloque de instrucciones
+     * 2 Comparator por referencia con orden inverso
+     */
+    
+    
+
+
+
+
 
 }
