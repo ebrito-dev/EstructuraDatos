@@ -31,6 +31,7 @@ public class Comparators {
         ejemplo8();
         ejemplo9();
         ejemplo10();
+        ejemplo11();
 
     }
 
@@ -202,9 +203,22 @@ public class Comparators {
      * 2 Comparator por referencia con orden inverso
      */
     
-    
+    private void ejemplo11() {
+    System.out.println("Ejemplo 11");
+        List<Estudiante> lista = new ArrayList<>(estList);
+        Comparator<Estudiante> comparator = Comparator.<Estudiante>comparingDouble
+        (e -> {
+            double notaAjustada = e.getNota();
+            if(notaAjustada < 7) {
+                notaAjustada += 2;
+            }
+            return Math.min(notaAjustada, 10);
 
-
+        })
+        .thenComparing(Estudiante::getName, Comparator.reverseOrder());
+        lista.sort(comparator);
+        print(lista);
+}
 
 
 

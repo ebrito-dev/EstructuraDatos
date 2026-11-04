@@ -14,6 +14,8 @@ public class App {
         runComparatorsObj2();
 
         Comparators comparators = new Comparators();
+
+        Comparable comparable = new Comparable();
     }
 
     private static void runComparatorsObj2() {
